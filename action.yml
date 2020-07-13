@@ -1,22 +1,6 @@
-name: 'CycloneDX .NET Generate BOM'
+name: 'CycloneDX PHP Composer Generate SBOM'
 author: Patrick Dwyer
-description: 'Github action to generate a CycloneDX BOM for .NET projects'
-inputs:
-  path:
-    description: 'The path to a .sln, .csproj, .vbproj, or packages.config file or the path to a directory which will be recursively analyzed for packages.config files'
-    required: true
-  out:
-    description: 'Output directory'
-    default: ./
-    required: false
-  json:
-    description: 'Produce a JSON BOM instead of XML, set to any value instead of false'
-    default: 'false'
-    required: false
-  github-bearer-token:
-    description: 'Optionally provide the GitHub action bearer token for license resolution.'
-    default: ''
-    required: false
+description: 'Github action to generate a CycloneDX BOM for PHP Composer projects'
 runs:
   using: 'node12'
   main: 'index.js'

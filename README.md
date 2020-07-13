@@ -3,35 +3,10 @@
 [![Group Discussion](https://img.shields.io/badge/discussion-groups.io-blue.svg)](https://groups.io/g/CycloneDX)
 [![Twitter](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow)](https://twitter.com/CycloneDX_Spec)
 
-# GitHub action to generate a CycloneDX SBOM for .NET
-
-## Inputs
-
-### `path`
-
-**Required** The path to a .sln, .csproj, .vbproj, or packages.config file or the path to a directory which will be recursively analyzed for packages.config files.
-
-Be sure to quote paths with spaces.
-
-### `out`
-
-Output directory, default is "./"
-
-Be sure to quote paths with spaces.
-
-### `json`
-
-Produce a JSON BOM instead of XML, set to any value instead of false.
-
-### `githubBearerToken`
-
-Optionally provide the GitHub action bearer token for license resolution (example below).
+# GitHub action to generate a CycloneDX SBOM for PHP Composer projects
 
 ## Example usage
 
 ```
-uses: CycloneDX/cyclonedx-dotnet-generate-sbom@master
-with:
-  path: 'Example.sln'
-  githubBearerToken: ${{ secrets.GITHUB_TOKEN }}
+uses: CycloneDX/gh-php-composer-generate-sbom@master
 ```
