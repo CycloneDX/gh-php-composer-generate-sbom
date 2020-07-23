@@ -8,5 +8,5 @@
 ## Example usage
 
 ```
-uses: CycloneDX/gh-php-composer-generate-sbom@master
+uses: CycloneDX/gh-php-composer-generate-sbom@v1
 ```
