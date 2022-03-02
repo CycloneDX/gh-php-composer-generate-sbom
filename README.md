@@ -10,3 +10,7 @@
 ```
 uses: CycloneDX/gh-php-composer-generate-sbom@v1
 ```
+
+## Internals
+
+This GitHub action utilizes the official [CycloneDX PHP Composer Plugin](https://github.com/CycloneDX/cyclonedx-php-composer).
