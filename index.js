@@ -25,7 +25,13 @@ try {
     execSync('composer make-bom -h');
   } catch (error) {
     console.log('Installing CycloneDX...');
-    let output = execSync('composer require --dev --no-interaction cyclonedx/cyclonedx-php-composer', { encoding: 'utf-8' });
+    try {
+      // try to enable the plugin
+      execSync("composer config --no-plugins allow-plugins.cyclonedx/cyclonedx-php-composer true");
+    } catch (error) {
+      // pass - just try to continue
+    }
+    let output = execSync("composer require --dev --no-interaction 'cyclonedx/cyclonedx-php-composer:<4'", { encoding: 'utf-8' });
     console.log(output);
   }
 
