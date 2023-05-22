@@ -1,0 +1,57 @@
+# docs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: "test"
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - master
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # unit tests
+  # units:
+  #  name: unit tests
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - uses: actions/checkout@v3
+  #    - run: npm ci
+  #    - run: npm test
+
+  # test action works running from the graph
+  dogfooding:
+    name: dogfooding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: this-action
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          tools: composer
+      - name: gen test bed
+        run: >
+          composer init
+          --no-interaction
+          --name='cyclonedx/dogfooding-test'
+          --description='CycloneDX GH action dogfooding test'
+          --author=CI
+          --type=project
+          --require='symfony/console:^6||^5'
+          --license=Apache-2.0
+          && composer install
+      - name: run dogfooding
+        uses: ./this-action/
+      - name: artifact dogfooding results
+        if: ${{ ! cancelled() }}
+        # see https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: dogfooding
+          path: ./bom.xml
