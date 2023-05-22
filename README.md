@@ -7,7 +7,7 @@
 
 ## Example usage
 
-```
+```yaml
 uses: CycloneDX/gh-php-composer-generate-sbom@v1
 ```
 
