@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "gh-php-composer-generate-sbom",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/CycloneDX/gh-php-composer-generate-sbom#readme",
+  "type": "commonjs",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "@actions/core": "1.2.6"
+  }
+}
