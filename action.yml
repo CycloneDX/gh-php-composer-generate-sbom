@@ -2,5 +2,5 @@ name: 'CycloneDX PHP Composer Generate SBOM'
 author: Patrick Dwyer
 description: 'Github action to generate a CycloneDX BOM for PHP Composer projects'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'index.js'
