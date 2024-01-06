@@ -13,4 +13,4 @@ uses: CycloneDX/gh-php-composer-generate-sbom@v1
 
 ## Internals
 
-This action utilizes [`cyclonedx/cyclonedx-php-composer`](https://packagist.org/packages/cyclonedx/cyclonedx-php-composer).
+This action utilizes `cyclonedx/cyclonedx-php-composer:<4`. See [`cyclonedx/cyclonedx-php-composer` on Packagist](https://packagist.org/packages/cyclonedx/cyclonedx-php-composer).
