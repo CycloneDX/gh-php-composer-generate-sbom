@@ -1,5 +1,5 @@
 >
-> This GitHub Action is considdered deprecated.  
+> This GitHub Action is considered deprecated.  
 > Instead, you may use one the following tool in your github workflow:
 >
 >  [`cyclonedx/cyclonedx-php-composer`](https://packagist.org/packages/cyclonedx/cyclonedx-php-composer)
