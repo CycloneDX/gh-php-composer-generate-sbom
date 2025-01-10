@@ -1,6 +1,6 @@
 > [!NOTE]
 > This GitHub Action is considered deprecated.  
-> Instead, you may use the underlying tool directly:
+> Instead, you may use the underlying tool directly: [cyclonedx/cyclonedx-php-composer](https://packagist.org/packages/cyclonedx/cyclonedx-php-composer)
 >
 > ```yaml
 > # setup you PHP and composer first - here is an example:
