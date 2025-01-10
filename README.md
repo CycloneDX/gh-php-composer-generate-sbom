@@ -14,7 +14,6 @@
 >   run: |-
 >     composer global config --no-plugins allow-plugins.cyclonedx/cyclonedx-php-composer true
 >     composer global require cyclonedx/cyclonedx-php-composer
-> 
 > - name: Create SBOM step
 >   # see for usage: https://packagist.org/packages/cyclonedx/cyclonedx-php-composer
 >   run: composer CycloneDX:make-sbom --help
