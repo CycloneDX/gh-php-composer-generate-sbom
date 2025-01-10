@@ -19,7 +19,7 @@
 > 
 > - name: Create SBOM step
 >   # see for usage: https://packagist.org/packages/cyclonedx/cyclonedx-php-composer
->   run: composer CycloneDX:make-sbom
+>   run: composer CycloneDX:make-sbom --help
 > ```
 
 ----
