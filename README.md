@@ -6,7 +6,7 @@
 > # setup you PHP and composer first - here is an example:
 > - name: Setup PHP
 >   uses: shivammathur/setup-php@v2
->    with:
+>   with:
 >     extensions: dom,json,libxml
 >     tools: 'composer:v2'
 > 
